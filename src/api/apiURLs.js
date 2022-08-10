@@ -1,5 +1,5 @@
 //const baseUrl = "https://localhost:44398/";
-export const baseUrl = "http://localhost:3333/";
+export const baseUrl = "https://imnodew.azurewebsites.net/";
 
 export const usersUrls = {
     tokenUrl : baseUrl + "users/login",
