@@ -12,7 +12,7 @@ function MostAssignedByUser({MostAssignedIncidentsData, getMostAssignedToUsers})
 
    if(MostAssignedIncidentsData.length ===0 || MostAssignedIncidentsData == null )
    return (<h3>loading..</h3>);
-console.log("MostAssignedIncidentsData", MostAssignedIncidentsData[0].Name);
+//console.log("MostAssignedIncidentsData", MostAssignedIncidentsData[0].Name);
   let data = [];
 
   try{
