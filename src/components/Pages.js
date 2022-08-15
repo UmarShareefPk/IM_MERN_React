@@ -11,12 +11,13 @@ export default function Pages({TotalRecords, PostsPerPage, setPageNumber, setPag
     let hideNextPages = false;
 
     const ddlRef = useRef();
-
+    console.log("TotalRecords PostsPerPage..", TotalRecords, PostsPerPage);
     let pageIndexes = [];
-    for(let i = 1; i <= Math.ceil(TotalRecords / PostsPerPage) ; i++ )
+    for(let i = 1; i <= Math.ceil(TotalRecords / PostsPerPage); i++ )
     {
+        console.log("Page adding..", i);
         if(i > currentPage - 3 &&  i < currentPage + 3)
-        pageIndexes.push(i);        
+                  pageIndexes.push(i);        
     }
 
     if(pageIndexes[0] != 1){
@@ -65,6 +66,8 @@ export default function Pages({TotalRecords, PostsPerPage, setPageNumber, setPag
             start = 0;
         setInformation("Showing from " + start + " to " + end + " of " + TotalRecords);
     }
+
+    console.log("pageIndexes", pageIndexes);
 
     let pages = pageIndexes.map((p,index)=>{
         let pclass = currentPage === p ? "active" : "";        

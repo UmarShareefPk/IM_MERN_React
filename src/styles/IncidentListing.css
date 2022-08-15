@@ -6,13 +6,13 @@ nav .badge{
     z-index: 1;
     }
 
-    .pagination li.active {
+    /* .pagination li.active {
         background: rgb(0,0,0);
 background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(86,110,52,1) 100%);
     }
     .pagination li.page{
         cursor: pointer;
-    }
+    } */
     
     .title{
         color:#1A237E;
