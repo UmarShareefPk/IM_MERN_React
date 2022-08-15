@@ -65,7 +65,7 @@ import { removeIncidentData, getIncidentById } from "../store/actions/incidentsA
          <a
            ref={ddlNotiRef}
            href="#dropdown1"
-           className="btn-floating z-depth-0 indigo darken-4 dropdown-trigger"
+           className="btn-floating z-depth-0 theme-color-background dropdown-trigger"
            data-target="dropdownNotifications"
          >
            <i className="material-icons">notifications</i>
@@ -92,7 +92,7 @@ import { removeIncidentData, getIncidentById } from "../store/actions/incidentsA
                        <div className="col s2">
                          {notification.IsRead ? (
                            <i
-                             className="material-icons white-text readIcon"
+                             className="material-icons black-text readIcon"
                              title="Mark Unread"
                              onClick={() => setStatus(notification._id, false)}
                            >
@@ -100,7 +100,7 @@ import { removeIncidentData, getIncidentById } from "../store/actions/incidentsA
                            </i>
                          ) : (
                            <i
-                             className="material-icons white-text readIcon"
+                             className="material-icons black-text readIcon"
                              title="Mark Read"
                              onClick={() => setStatus(notification._id, true)}
                            >
@@ -124,7 +124,7 @@ import { removeIncidentData, getIncidentById } from "../store/actions/incidentsA
        </li>
        <li>
          {unReadCount > 0 ? (
-           <span className="badge white-text new pink">{unReadCount}</span>
+           <span className="badge white-text new green darken-2">{unReadCount}</span>
          ) : null}
        </li>
      </>

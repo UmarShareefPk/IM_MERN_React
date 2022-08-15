@@ -7,9 +7,12 @@
     max-height: 500px;
     overflow: auto;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 .widget h5{
-    color: #1A237E;
+    background: linear-gradient(0deg, rgba(26,35,126,1) 25%, rgba(253,187,45,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: large;
     font-weight: bold;
 }
@@ -56,3 +59,53 @@
    text-decoration: underline;
    cursor: pointer;
 }
+
+
+/* Small devices  */
+@media (min-width: 300px) {
+    .widget{        
+        padding: 0 10px;  
+        overflow: auto;
+        margin-bottom: 10px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .incident{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;   
+        
+        border-bottom: 1px dotted;
+    }
+      
+     
+     .incident .title a{
+         font-size: 12px; 
+         color:  #1A237E;
+        
+     }
+ }
+ 
+ /* (tablets, 768px and up) */
+ @media (min-width: 700px) {
+     
+ }
+ 
+ /* Large Tablets  */
+ @media (min-width: 990px) {
+    .widget{        
+        padding: 0 10px;  
+        overflow: auto;
+        margin-bottom: 10px;
+        height: 500px;
+        max-width: 100%;
+    }
+ }
+ 
+ /* Computer */
+ @media (min-width: 1500px) {
+  
+ }

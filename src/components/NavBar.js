@@ -5,6 +5,8 @@ import '../styles/Navbar.css';
 import { Redirect } from 'react-router-dom';
 import Notifications from './Notifications';
 import { signOut } from "../store/actions/userLoginActions";
+import logo from '../images/logo-white.png'
+
 
 function NavBar({user_Name, loginError, token, signOut}) {
 
@@ -15,12 +17,12 @@ function NavBar({user_Name, loginError, token, signOut}) {
   // if (loginError) return <Redirect to='/' /> 
    
     return (
-      <nav className="nav-wrapper indigo darken-4">
+      <nav className="nav-wrapper theme-color-background">
         <div className="container">
           <div className="left">
           <NavLink to="/dashboard" className="brand-logo">             
-              Incident Manager
-            </NavLink>
+            <img src={logo} />
+          </NavLink>
           </div>
           <a href="#" className="sidenav-trigger" data-target="mobile-menu">
             <i className="material-icons">menu</i>
@@ -40,7 +42,7 @@ function NavBar({user_Name, loginError, token, signOut}) {
            
               <Notifications />
             <li>
-                <button type="button" title={user_Name} className="btn-floating  orange darken-3 userWelcome" >
+                <button type="button" title={user_Name} className="btn-floating  blue darken-3 userWelcome" >
                   {user_Name.split(/\s/).reduce((response,word)=> response+=word.slice(0,1),'')} 
                  </button>
             </li>
@@ -49,28 +51,28 @@ function NavBar({user_Name, loginError, token, signOut}) {
             </li>
           </ul>
           {/* for mobile */}
-          <ul className="sidenav grey lighten-2" id="mobile-menu">
+          <ul className="sidenav theme-color-background " id="mobile-menu">
             <li>
-              <NavLink to="/incidentListing"  className="sidenav-close">             
+              <NavLink to="/incidentListing"  className="sidenav-close white-text">             
                   Incidents
                 </NavLink>               
             </li>
             <li>
-                <NavLink to="/UsersList" className="sidenav-close">             
+                <NavLink to="/UsersList" className="sidenav-close white-text">             
                        Users
                   </NavLink>            
             </li>
             <li>
-                 <a> <i className="material-icons" onClick={signOut}>settings_power</i> </a>        
+                 <a> <i className="material-icons white-text" onClick={signOut}>settings_power</i> </a>        
             </li>
             
-            <li>
+            {/* <li>
               <a href="" className=" white-text">
                 <i className="material-icons">notifications</i>
                 <span className="Indigo-text">5</span>
               </a>
              
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { logIn } from '../../store/actions/userLoginActions'
 import { Redirect } from 'react-router-dom'
 import '../../styles/loginStyles.css'
-
+import logo from '../../images/logoBigWhite.png'
+import logoSmall from '../../images/logoColored.png'
 
  function Login(props) {
      const [username , setUsername] = useState('');
@@ -21,12 +22,18 @@ import '../../styles/loginStyles.css'
     if (props.token) return <Redirect to='/incidentListing' /> 
      
     return (
-      <div className="loginMain">
+      <div className="">
         <div className="row ">
-          <div className="col s12 m8 offset-m2 l6 offset-l3 login">
-            <h3> WELCOME!</h3>
-            <br />
-            <h6>User Login</h6>
+          <div className="login-logo-col col l6 hide-on-med-and-down ">
+            <div className="logo-Container">
+              <img src={logo} />
+            </div>
+          </div> 
+          <div className="col s12 m8 offset-m2 l6">
+          <div className="form-container">
+          <img className='hide-on-large-only' src={logoSmall}/>
+            
+            <h4>User Login</h4>
             <br />
             <form>
               <div className="input-field">
@@ -41,19 +48,20 @@ import '../../styles/loginStyles.css'
                 <input type="password" id="password"  onChange={(e) => setPassword(e.target.value)} />
                 <label htmlFor="password">Your Password</label>
               </div>
-              <div className="input-field">
+              {/* <div className="input-field">
                 <a href="/"> Forgot password?</a>
-              </div>
+              </div> */}
               <div className="input-field ">              
                   <p className="red-text">{props.loginError? "Incorret username or password." : "" }</p>
               </div>
               <div className="input-field ">
-                <button className="btn indigo darken-2 right" onClick={(e)=>loginClick(e)}>
+                <button className="btn theme-color-background right" onClick={(e)=>loginClick(e)}>
                   <span>Login</span>
                   <i className="material-icons right">send</i>
                 </button>
               </div>             
             </form>
+            </div>
           </div>
         </div>      
       </div>
