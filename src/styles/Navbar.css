@@ -63,7 +63,8 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(86,110,52,1) 100%);
 /* Small devices  */
 @media (min-width: 300px) {
     nav .brand-logo {
-        font-size: 21px;
+        font-size: small;
+        margin-top: 1vh;
     }
 }
 
@@ -78,6 +79,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(86,110,52,1) 100%);
 @media (min-width: 1000px) {
     nav .brand-logo {
         font-size: 30px;
+        margin-top: 0vh;
     }
 }
 
@@ -86,6 +88,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(86,110,52,1) 100%);
 
     nav .brand-logo {
      font-size: 30px;
+     margin-top: 0vh;
  }
    
 }
