@@ -15,8 +15,7 @@ function OverallWidget({overallWidgetData, getOverallWidgetData}) {
         console.log("overallWidgetData", overallWidgetData);
         const options = {
             chart: {
-                type: 'pie',
-                height: (70) + '%',
+                type: 'pie',                
             },
             title: {
                 text: ''
